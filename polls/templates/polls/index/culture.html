@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+
+<body>
+    {% include "polls/Menu.html" %}
+    {% include "polls/index/banner.html" %}
+
+    <div class="pro-fi">
+        <div class="intoentit"><img src="{% static 'web/img/culture_01.png'%}" alt="Brand Culture" width="353" height="34"></div>
+        <div class="intocntit">企业文化</div>
+    </div>
+    <div class="cul-se">
+        <div class="leri  w1000">
+            <div class="le">
+                <p>
+                    <img src="{% static 'web/qywh_files/cm.png'%}" width="451" />
+                </p>
+                <br />
+                <p>
+                    企业文化：责任 创新 挑战 卓越
+                </p>
+                <p>
+                    企业愿景：以科技还原生活
+                </p>
+                <p>
+                    企业宗旨：蓝天、碧水、清新可人的空气，可兰素，引领环保新表现
+                </p>
+                <p>
+                    行动准则：面向市场 主动出击 专业水准 快速反应
+                </p>
+                <p>
+                    环境责任：科技为先，炼汽车环保精品；规范为本，还人类一片蓝天
+                </p>
+                <p>
+                    质量方针：全面控制 持续改进 锐意进取追求卓越
+                </p>
+                <p>
+                    销售主张：品质王者 开创中国AdBlue市场
+                </p>
+            </div>
+            <div class="ri">
+                <img src=" {% static 'uploadfile/201602269925.jpg'%}">
+            </div>
+            <div class="clear clear1"></div>
+            <div class="leri  w1000">
+                <div class="le1">
+                    <img src=" {% static 'uploadfile/201602261105.jpg'%}">
+                </div>
+                <div class="ri1">
+                    <p>
+                        <img src="{% static 'web/qywh_files/company_147.png'%}" width="282" />
+                    </p>
+                    <p>
+                        锐意创新，追求卓越，立足于为人类创造更好的空气环境，为全球减排目标而奋勇拼搏、不停地向更高目标攀登，实现创新、跨越和突破。激励并引导广大员工保持崇高的精神追求，自强不息，锐意进取，积极向上；以不懈奋斗的进取精神勇往直前，开创中国环保科技事业的新纪元。
+                    </p>
+                    <p class="p2">
+                        <img src="{% static 'web/qywh_files/company_151.png'%}" />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "polls/footer.html" %}
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+
+    </script><script type="text/javascript">
+        $(function(){
+            culscroll()
+            window.onload=function(){
+                prozc();
+            }
+            $(window).scroll(function(){
+                culscroll();
+            })
+        })
+    </script>
+    </body>
+
+</html>

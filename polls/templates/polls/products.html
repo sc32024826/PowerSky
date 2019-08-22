@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    {% include "polls/Menu.html" %}
+    <div class="prolist-fi">
+        <div class="wrap" id="wrapper" data-page="2">
+            <div class="container" id="container" style="height:auto">
+                {% if  products_list %}
+                    {% for product in products_list %}
+                        <div class="box list-item grid">
+                            <div class="pd10">
+                                <div class="box-preview">
+                                    <div class="insetscroll">
+                                        <img src="{{ MEDIA_URL }}{{ product.src }}" width="260" height="173" />
+                                        <div class="box-mask">
+                                            <div class="box-mask-detail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-description">
+                                    <div class="pd10">
+                                        <div class="tit">{{ product.name }}</div>
+                                        <div class="stit">{{ product.type_text }}</div>
+                                        <p style="height:42px;">{{ product.effect }}</p>
+                                        <a href="{% url 'polls:detail' product.id %}">
+                                            <div class="more">more</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                {% endif %}
+            </div>
+        </div>
+        <div class="page tc mt40">
+            <div>
+                {% if products_list.previous_page_number > 0 %}
+                <a href="?page={{ products_list.previous_page_number }}" style="text-decoration:none;">上一页</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ products_list.number }} of {{ products_list.paginator.num_pages }}</span>
+                {% if products_list.next_page_number > 1 %}
+                <a href="?page={{ products_list.next_page_number }}">下一页</a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+    {% include "polls/footer.html" %}
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/blocksit.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function() {
+        prolist();
+
+    });
+    $(".box").bind("mousedown", function() {
+        var id = $(this).data("url");
+        //alert(1)
+        //console.log(id)
+        $(".boxbox").load(id).fadeIn();
+
+
+    })
+
+    $(window).resize(function() {
+        prolist();
+    });
+    {#根据显示器分辨率控制显示列数#}
+    function prolist() {
+        var winWidth = $(window).width();
+        var conWidth;
+        if (winWidth > 1800) {
+            conWidth = 1800;
+            col = 6
+        } else if (winWidth > 1500) {
+            conWidth = 1500;
+            col = 5
+        } else if (winWidth > 1200) {
+            conWidth = 1200;
+            col = 4;
+        } else {
+            conWidth = 900;
+            col = 3;
+        }
+        $('#container').width(conWidth);
+        $('#container').BlocksIt({
+            numOfCol: col,
+            offsetX: 10,
+            offsetY: 10
+        });
+    }
+    </script>

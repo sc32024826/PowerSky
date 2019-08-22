@@ -1,0 +1,43 @@
+﻿
+
+/*******************发展历程*************************/
+.history-list a{display:block; width:29px; height:58px; top:4px; background-image:url(../img/honor_btn.jpg); position:absolute; overflow:hidden;}
+.prev02{ left:14px;background-position: 0 0;}
+.next02{ background-position:-29px 0; right:14px;}
+.prev02:hover{  background-position:0 -58px ;}
+.next02:hover{  background-position:-29px -58px;}
+
+.history-list{ width:800px; height:67px; margin:0 auto; border-bottom:1px solid #e4e4e4; padding-bottom:33px; position:relative;}
+.history-scroll{ width:667px;height:67px; margin:0 auto; background:url(../img/history_bg05.jpg) repeat-x 0 33px; overflow:hidden; position:relative;}
+.history-scroll ul{ position:absolute; left:0; top:0;}
+.history-scroll ul li{ display:block;float: left; _display:inline; width:67px; height:67px; position:relative; overflow:hidden; margin-right:33px;; cursor:pointer; border:0px;}
+.hisnav-bg01{ position:absolute;width:767px;height:67px; left:0; bottom:0; overflow:hidden; background:url(../img/history_bg04.png) no-repeat 0 bottom; z-index:4}
+.hisnav-bg02{position:absolute;width:767px;height:67px; left:0; top:0; overflow:hidden; background:url(../img/history_bg01.png) no-repeat 0 bottom; z-index:3}
+.hisnav-bg03{position:absolute;width:767px;height:67px; left:0; top:0; overflow:hidden;  z-index:2}
+.hisnav-img{position:absolute;width:767px;height:67px; left:0; top:0; overflow:hidden; z-index:1; display:none;}
+.history-scroll ul li p{ position:relative; z-index:5; font:bold 14px/67px "微软雅黑"; color:#fff; text-align:center;}
+
+.history-scroll ul li.cur .hisnav-bg01{ display:none;}
+.history-scroll ul li.cur .hisnav-bg03{display:none;}
+
+
+.event-ajax{ width:790px; min-height:430px; margin:28px auto 0; position:relative;  }
+.event-year{ font:italic bold 36px/36px Arial; color:#dd2020;float:left;width:100px;}
+.event-list{ width:672px; padding-top:3px;float:left; }
+.event-list ul li{ width:744px; margin:0 0 10px 0; padding-left:25px; border-left:3px solid #c7c7c7;}
+.event-list ul li p { font:12px/24px "微软雅黑"; color:#888;}
+.event-list ul li.hover{border-color:#dd2020;}
+.event-list ul li.hover p { color:#dd2020;}
+.even-pic img{ float:left; padding:3px; border:1px solid #dcdcdc; margin:10px 14px 0 0;}
+.even-more span{ display:block; width:104px; height:39px; font:bold 12px/35px "微软雅黑"; text-align:center;  cursor:pointer;}
+.event-btn{ position:absolute; left:262px; bottom:10px; _position:relative; _margin-left:262px;}
+.event-btn a{ float:left;display:block; width:104px; height:39px; margin-right:5px; _margin-top:-38px; font:bold 12px/35px "微软雅黑"; text-align:center; background:url(../img/history_bg06.jpg) no-repeat; cursor:pointer; color:#666;}
+.innner-con {
+	position: relative;
+	padding: 30px 0 50px;
+}
+
+/******************企业文化********************/
+ul, menu, dir {
+list-style-type: disc;
+}

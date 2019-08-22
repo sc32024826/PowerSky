@@ -1,0 +1,138 @@
+{% load static %}
+
+    <div class="header">
+        <div class="header-main w1000">
+            <div class="logo"><a href="?"><img src="{% static 'web/img/logo.png'%}" alt="首页"></a></div>
+            {#顶部菜单栏开始#}
+            <div class="menub">
+                <b></b>
+                <ul>
+                    <li class="ho on"> <a href="{% url 'polls:HomeView' %}" class="btit">力众蓝天</a>
+                        <div class="subnav" style="width:700px;">
+                            <a href="{% url 'polls:HomeView' %}">力众蓝天介绍</a><span>·</span>
+                            <a href="{% url 'polls:manage' %}">总经理致辞</a><span>·</span>
+                            <a href="{% url 'polls:story' %}">品牌故事</a><span>·</span>
+                            <a href="{% url 'polls:social' %}">社会责任</a><span>·</span>
+                            <a href="{% url 'polls:develop' %}">发展历程</a><span>·</span>
+                            <a href="{% url 'polls:culture' %}">企业文化</a><span>·</span>
+                            <a href="{% url 'polls:honor' %}">企业荣誉</a>
+                            <!--<span>·</span>
+                    <a href="?m=contacts&a=l&id=343">组织架构</a>--><span>·</span>
+                            <a href="{% url 'polls:hr' %}">人力资源</a> </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:allProductView' %}" class="btit">产品展示</a>
+                        <div class="subnav" style="width:740px; left:-98px;">
+                            <a href="{% url 'polls:ProductView' 0 %}">车用尿素溶液</a><span>·</span>
+                            <a href="{% url 'polls:ProductView' 1 %}">加注设备系列</a>
+                        </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:solution_list'  %}" class="btit">解决方案 </a>
+                        <div class="subnav" style="width:600px;">
+                            <a class="first" href="{% url 'polls:solution_class' 1 %}">SCR系统解决方案</a><span>·</span>
+                            <a href="{% url 'polls:solution_class' 2 %}">燃油系统解决方案</a><span>·</span>
+                            <a href="{% url 'polls:solution_class' 3 %}">润滑系统决方案</a><span>·</span>
+                            <a href="{% url 'polls:solution_class' 4 %}">EGR系统解决方案</a>
+                        </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:news' news_type=4 %}" class="btit">新闻中心</a>
+                        <div class="subnav" style="width:400px;">
+                            <a class="first" href="{% url 'polls:news' news_type=0 %}">全部新闻</a><span>·</span>
+                            <a class="first" href="{% url 'polls:news' news_type=1 %}">行业新闻</a><span>·</span>
+                            <a class="first" href="{% url 'polls:news' news_type=2 %}">媒体报导</a><span>·</span>
+                            <a class="first" href="{% url 'polls:news' news_type=3 %}">技术交流</a> </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:business' %}" class="btit">招商专区</a>
+                        <div class="subnav" style="width:500px;">
+                            <a class="first" href="">我们的优势</a><span>·</span>
+                            <a href="">我们的支持</a><span>.</span>
+                            <a href="">连锁加注站加盟</a>
+
+                        </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:service' %}" class="btit">服务支持</a>
+                        <div class="subnav" style="width:400px;">
+                            <a  href="{% url 'polls:service' %}">服务理念</a>
+                        </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:contactUs' %}" class="btit">联系我们</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg"></div>
+    </div>
+    {#菜单结束#}
+    {#右侧联系栏#}
+    <div class="lxfx">
+        <ul>
+            <li><a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4006768988&f=1&ty=1&ap=000011:400104:|f:Grtx1" target="_black">
+                    <div class="leftlx"><i></i>
+                        <p>QQ咨询</p>
+                    </div>
+                </a></li>
+            <li><a href="javascript:void(0)">
+                    <div class="leftlx"><i class="icon-tel"></i>
+                        <p>电话</p>
+                    </div><span>0578-5887555</span>
+                </a></li>
+            <li><a href="" target="_black">
+                    <div class="leftlx"><i class="icon-ly"></i>
+                        <p>在线留言</p>
+                    </div>
+                </a></li>
+            <li style="overflow: visible">
+                <a href="javascript:void(0)">
+                    <div class="leftlx">
+                        <i class="icon-wx"></i>
+                        <p>微信扫一扫</p>
+                    </div>
+                </a>
+                <div class="ewm">
+                    <img src="{% static 'web/img/drny.jpg-v=v2.jpg' %}" width="120" height="120">
+                </div>
+            </li>
+        </ul>
+    </div>
+    {#右侧联系栏结束#}
+    {#右侧联系栏 动画功能#}
+    <script>
+    var lxbtn = $(".lxfx li");
+    lxbtn.each(function() {
+        var index = $(this).index()
+        if (index == 0 || index == 2) {
+            $(this).hover(function() {
+                $(this).stop().animate({ marginLeft: "-13px", width: "90px" }, 600)
+            }, function() {
+                $(this).stop().animate({ marginLeft: "0px", width: "77px" }, 600)
+            })
+        }
+        if (index == 1) {
+            $(this).hover(function() {
+                $(this).stop().animate({ marginLeft: "-155px", width: "232px" }, 600)
+            }, function() {
+                $(this).stop().animate({ marginLeft: "0px", width: "77px" }, 600)
+            })
+        }
+        if (index == 3) {
+            $(this).hover(function() {
+                $(this).stop().animate({ marginLeft: "-13px", width: "90px" }, 600, function() {
+                    $(".ewm").stop().show()
+                })
+            }, function() {
+                $(this).stop().animate({ marginLeft: "0px", width: "77px" }, 600, function() {
+                    $(".ewm").stop().hide()
+                })
+            })
+        }
+        if (index == 4) {
+            $(this).hover(function() {
+                $(this).stop().animate({ marginLeft: "-13px", width: "90px" }, 600, function() {
+                    $(".ewm1").stop().show()
+                })
+            }, function() {
+                $(this).stop().animate({ marginLeft: "0px", width: "77px" }, 600, function() {
+                    $(".ewm1").stop().hide()
+                })
+            })
+        }
+    })
+    </script>

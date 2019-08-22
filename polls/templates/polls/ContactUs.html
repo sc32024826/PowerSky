@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    {% include "polls/Menu.html" %}
+    <div class="clearslw"></div>
+        <div class="forms">
+            <form action="" id="tj-form" enctype="multipart/form-data" method="post">
+                <div class="tit-ly">在线留言</div>
+                <div class="inputs put">
+                    <label>姓名</label>
+                    <input type="text" name="name" id="title" class="int">
+                    <span>*必填</span>
+                </div>
+                <div class="inputs-t put">
+                    <label>手机</label>
+                    <input type="text" name="tel" id="tel" class="int">
+                    <span>*必填</span>
+                </div>
+                <div class="inputs put">
+                    <label>地址</label>
+                    <input type="text" name="add" id="addr" class="int">
+                    <span>*必填</span>
+                </div>
+                <div class="inputs-t put">
+                    <label>邮箱</label>
+                    <input type="text" name="email" id="email" class="int">
+                    <span></span>
+                </div>
+                <textarea class="textlst int" name="content" id="content">   您的留言或宝贵意见</textarea>
+                <input type="submit" class="submit-tj" value="提交留言">
+            </form>
+            <a href="javascript:void(0)" class="tj-close"></a>
+        </div>
+        <div class="list-lx">
+            <div class="roop">
+                <h1>联系我们</h1>
+                <img src="{% static 'img/public/bsg_51_13.jpg'%}" alt="Brand Profile" width="120" height="15 ">
+                <div class="telphone">
+                    <i></i>
+                    <span>0578-5887555</span>
+                </div>
+                <div class="where">
+                    <i></i>
+                    <span style=" margin-top:10px; line-height:1.5;">浙江省丽水市景宁畲族自治县<br />红星街道金垟路288号6幢1楼</span>
+                </div>
+                <a href="javascript:void(0)" class="liuyan">在线留言</a>
+                <img src="{% static 'img/public/bsg_51_26.jpg'%}" alt="Brand Profile" width="98" height="12">
+            </div>
+            <div class="erweima">
+                <img src="{% static 'web/img/drny.jpg-v=v2.jpg'%}" alt="Brand Profile" width="83" height="83">
+                <div class="showphone">
+                    <span>二维码扫码</span>
+                    <p>拿出你的手机，扫描我们的微信二维码 记录我们的相关信息，这很简单也很有趣只要你愿意！</p>
+                </div>
+            </div>
+        </div>
+        <div id="dituContent">
+        </div>
+
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Py3sRSrvx9wiSrL97PCxpYkV"></script>
+        <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+
+        $(function() {
+            $("body").css("overflow", "hidden")
+            var window_height = document.documentElement.clientHeight - 87;
+            $("#dituContent").css("height", window_height + "px")
+            $("body").css("background", "#fff")
+            dd(6)
+
+        })
+
+        var qs = (function() {
+            var argName, args, pair, pairs, pos, query, value, _i, _len;
+            args = {};
+            query = window.location.search.substring(1);
+            pairs = query.split('&');
+            for (_i = 0, _len = pairs.length; _i < _len; _i++) {
+                pair = pairs[_i];
+                pos = pair.indexOf('=');
+                if (pos === -1) {
+                    continue;
+                }
+                argName = pair.substr(0, pos);
+                value = pair.substr(pos + 1);
+                value = decodeURIComponent(value);
+                args[argName] = value;
+            }
+            return args;
+        })()
+        if (qs.id == 0) {
+            $(".forms").css("display", "block");
+            out()
+        }
+        var content = $("#content");
+        $(".liuyan").click(function() {
+            out()
+        })
+
+        function out() {
+            $(".clearslw").fadeIn("slow", function() {
+                $(".forms").fadeIn("fast", function() {
+                    content.val("")
+                    content.focus()
+
+                    content.blur(function() {
+                        if (!$(this).val()) {
+                            $(this).val("您的留言或宝贵意见")
+                        } else {
+                            return false
+                        }
+                    });
+
+                })
+            })
+        }
+        $(".tj-close").click(function() {
+            $(".forms").fadeOut("slow", function() {
+                $(".clearslw").hide()
+            })
+        })
+
+        // 百度地图API功能
+        var mp = new BMap.Map("dituContent");
+        mp.centerAndZoom(new BMap.Point(119.660554,28.004172), 17);
+
+        var mapStyle = { style: "dark" };
+        mp.setMapStyle(mapStyle);
+        mp.addControl(new BMap.NavigationControl());
+        mp.enableScrollWheelZoom();
+        // 复杂的自定义覆盖物
+        function ComplexCustomOverlay(point, text, mouseoverText) {
+            this._point = point;
+            this._text = text;
+            this._overText = mouseoverText;
+        }
+        ComplexCustomOverlay.prototype = new BMap.Overlay();
+        ComplexCustomOverlay.prototype.initialize = function(map) {
+            this._map = map;
+            var div = this._div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.zIndex = BMap.Overlay.getZIndex(this._point.lat);
+            div.style.backgroundColor = "none";
+            div.style.border = "none";
+            div.style.color = "none";
+            div.style.height = "18px";
+            div.style.padding = "0";
+            div.style.lineHeight = "18px";
+            div.style.whiteSpace = "nowrap";
+            div.style.MozUserSelect = "none";
+            div.style.fontSize = "12px"
+            var span = this._span = document.createElement("span");
+            div.appendChild(span);
+            span.appendChild(document.createTextNode(this._text));
+            var that = this;
+
+            var arrow = this._arrow = document.createElement("div");
+            arrow.style.background = "url('static/web/img/public/adv_11_03.png?t=1429771842') no-repeat";
+            arrow.style.position = "absolute";
+            arrow.style.width = "72px";
+            arrow.style.height = "116px";
+            arrow.style.top = "-72px";
+            arrow.style.left = "0";
+            arrow.style.overflow = "hidden";
+            div.appendChild(arrow);
+
+
+            mp.getPanes().labelPane.appendChild(div);
+
+            return div;
+        }
+        ComplexCustomOverlay.prototype.draw = function() {
+            var map = this._map;
+            var pixel = map.pointToOverlayPixel(this._point);
+            this._div.style.left = pixel.x - 35 + "px";
+            this._div.style.top = pixel.y - 30 + "px";
+        }
+        var txt = "",
+            mouseoverTxt = "";
+        //104.107307,30.660848
+        var myCompOverlay = new ComplexCustomOverlay(new BMap.Point(120.30315, 30.77381), " ", mouseoverTxt);
+
+        mp.addOverlay(myCompOverlay);
+
+        function onsub() {
+            if ($("#title").val() == "") {
+                $("#title").addClass('error');
+                $("#title").focus();
+                return false;
+            } else {
+                $("#title").removeClass('error');
+            }
+            if ($("input[name=tel]").val() == "") {
+                $("#tel").addClass('error');
+                $("#tel").focus();
+                return false;
+            } else {
+                $("#tel").removeClass('error');
+            }
+            var tel = $.trim($('input[name=tel]').val());
+            if (tel) {
+                var tel = $("input[name=tel]").val();
+                var p1 = /^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/;
+                var me = false;
+                var reg0 = /^13\d{5,9}$/;
+                var reg1 = /^153\d{4,8}$/;
+                var reg2 = /^159\d{4,8}$/;
+                var reg3 = /^15\d{5,9}$/;
+                var reg4 = /^18\d{5,9}$/;
+                var reg5 = /^0\d{10,11}$/;
+                var my = false;
+                if (p1.test(tel)) me = true;
+                if (reg0.test(tel)) my = true;
+                if (reg1.test(tel)) my = true;
+                if (reg2.test(tel)) my = true;
+                if (reg3.test(tel)) my = true;
+                if (reg4.test(tel)) my = true;
+                if (reg5.test(tel)) my = true;
+                if (!my && !me) {
+                    $("#tel").addClass('error');
+                    $("#tel").focus();
+                    return false;
+                }
+            } else {
+                $("#tel").removeClass('error');
+            }
+            if ($("#addr").val() == "") {
+                $("#addr").addClass('error');
+                $("#addr").focus();
+                return false;
+            } else {
+                $("#addr").removeClass('error');
+            }
+        }
+
+    </script>
+
+</body>
+</html>

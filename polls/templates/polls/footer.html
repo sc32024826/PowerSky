@@ -1,0 +1,48 @@
+{% load static %}
+    <div class="footer clearfix">
+        <div class="f-fi w1000 clearfix">
+            <div class="le">
+                <ul>
+                    <li class="ho">
+                        <a href="{% url 'polls:HomeView' %}" class="btit">走进力众蓝天</a>
+                        <div class="subnav">
+                            <a href="{% url 'polls:HomeView' %}">力众蓝天介绍</a>
+                            <a href="{% url 'polls:manage' %}">总经理致辞</a>
+                            <a href="{% url 'polls:story' %}">品牌故事</a>
+                            <a href="{% url 'polls:culture' %}">企业文化</a>
+                            <a href="{% url 'polls:social' %}">社会责任</a>
+                            <a href="{% url 'polls:honor' %}">企业荣誉</a>
+                            <!-- <a href="?m=contacts&a=l&id=343">组织架构</a> -->
+                            <a href="{% url 'polls:develop' %}">发展历程</a>
+                            <a href="{% url 'polls:hr' %}">人力资源</a> </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:news' 0 %}" class="btit">新闻中心</a>
+                        <div class="subnav">
+                            <a href="{% url 'polls:news' 0 %}">力众蓝天新闻</a>
+                            <a href="{% url 'polls:news' 1 %}">行业新闻</a>
+                            <a href="{% url 'polls:news' 2 %}">媒体报导</a>
+                            <a href="{% url 'polls:news' 3 %}">技术交流</a>
+                        </div>
+                    </li>
+                    <li class="ho"> <a href="{% url 'polls:service' %}" class="btit">服务支持</a>
+                        <div class="subnav">
+                            <a href="{% url 'polls:service' %}">服务理念</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="map" style="background:url({% static 'web/img/home_111.png' %}) no-repeat center 75px">
+                <div class="mapb">
+                    <div class="tit">浙江省丽水市景宁畲族自治县<br />红星街道金垟路288号6幢1楼</div>
+                    <div class="tel">400 676 8988</div>
+                    <div class="stit">Map</div>
+                </div>
+            </div>
+        </div>
+        <div class="f-se w1000">
+            <div class="le">
+                浙江力众环保科技有限公司 <a href="http://www.beian.miit.gov.cn" target="_blank">备案号</a>
+                技术支持：<a target="_blank" href="">XXXX</a>
+            </div>
+        </div>
+    </div>

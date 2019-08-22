@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    {% include "polls/Menu.html" %}
+        <div class="in-banner" style="background:url({% static 'web/news_files/company_02.jpg' %}) no-repeat center">
+        <div class="bannertxt w1000">
+            <img src="{% static 'web/gywm_files/company_02.png' %}"  width="852" height="88" class="txt1">
+            <div class="txt5">
+                <img src="{% static 'web/gywm_files/company_04.png' %}"  width="176" height="18"  class="txt51">
+                <span class="hr"></span>
+                <span class="txt52">科技还原绿色生活</span>
+                <span class="txt53"><a href="?m=contacts&a=l&id=338" >走进可兰素</a></span>
+                <a class="btn"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pro-fi">
+        <div class="intoentit"><img src="{% static 'web/img/honor.png' %}" alt="Honor Qualifications" width="500" height="34"></div>
+        <div class="intocntit">企业荣誉</div>
+    </div>
+
+    <div class="honor">
+        <div class="w1000">
+            <div class="honor-box" id="box">
+                <ul>
+                    <li>
+                        <img src="{% static 'web/img/honor/0.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/1.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/2.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/3.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/4.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/5.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/6.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/7.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                    <li>
+                        <img src="{% static 'web/img/honor/8.jpg'%}" alt="" class="img">
+                        <p><img src="{% static 'web/img/honor_05.png'%}"></p>
+                    </li>
+                </ul>
+                <pre class="prev"></pre>
+                <pre class="next"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/jquery.ZoomPic.js' %}" type="text/javascript" charset="utf-8"></script>
+    {% include "polls/footer.html" %}
+    <script type="text/javascript">
+    $(function() {
+        prozc();
+        honor();
+        // alert($(window).scrollTop());
+        $(window).scroll(function() {
+            honor()
+        })
+    })
+    </script>
+    </body>
+
+</html>

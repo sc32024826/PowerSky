@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    <div class="loading">
+        <img src="{% static 'web/light_box/loading.gif' %}" width="32" height="32" alt="">
+    </div>
+    {% include "polls/Menu.html" %}
+    <div class="banner">
+        {% if banner_list %}
+        <ul class="jslist">
+            {% for banner in banner_list %}
+                <li style="background:url({{ MEDIA_URL }}{{ banner.url }}) no-repeat center">
+                    <a href="" style="position: absolute; display: block; width: 100%; height: 100%; z-index: 2"></a>
+                    <div class="bannertxt w1000">
+                    </div>
+                </li>
+            {% endfor %}
+
+
+            {% comment %}
+            <li style="background:url({% static 'uploadfile/201901287196.jpg' %}) no-repeat center">
+                <div class="bannertxt w1000">
+{#                    <img src="{% static 'web/img/home_14.png' %}" width="734" height="91" class="txt1">#}
+{#                    <img src="{% static 'web/img/home_18.png' %}" width="16" height="17" class="txt2">#}
+{#                    <img src="{% static 'web/img/home_22.png' %}" width="409" height="88" class="txt3">#}
+                </div>
+            </li>
+
+            <li style="background:url({% static 'uploadfile/201603081536.jpg' %}) no-repeat center">
+                <a href="" style="position: absolute; display: block; width: 100%; height: 100%; z-index: 2"></a>
+                <div class="bannertxt w1000">
+{#                    <img src="{% static 'web/img/home_14.png' %}" width="734" height="91" class="txt1">#}
+{#                    <img src="{% static 'web/img/home_18.png' %}" width="16" height="17" class="txt2">#}
+{#                    <img src="{% static 'web/img/home_22.png' %}" width="409" height="88" class="txt3">#}
+                </div>
+            </li>
+            <li style="background:url({% static 'uploadfile/201903019704.jpg' %}) no-repeat center">
+                <a href="" style="position: absolute; display: block; width: 100%; height: 100%; z-index: 2"></a>
+                <div class="bannertxt w1000">
+                    <img src="{% static 'web/img/home_14.png' %}" width="734" height="91" class="txt1">
+                    <img src="{% static 'web/img/home_18.png' %}" width="16" height="17" class="txt2">
+                    <img src="{% static 'web/img/home_22.png' %}" width="409" height="88" class="txt3">
+                </div>
+            </li>
+            {% endcomment %}
+
+        </ul>
+        {% endif %}
+        <div class="number">
+        {% for i in num %}
+            <span class="current"><i>
+                    <div class="sz{{ i }}"></div>
+                </i></span>
+        {% endfor %}
+        </div>
+    </div>
+    {# banner 结束#}
+    <div class="i-fi an-i">
+        <div class="toentit"><img src="{% static 'web/index_files/home_09.png' %}" alt="" width="650" height="46"></div>
+        <div class="tocntit">引领环保新表现</div>
+        <div class="tosentit"><img src="{% static 'web/index_files/home_16.png' %}" alt="" width="194" height="18"></div>
+        <div class="i-fib w1000">
+            <div class="ri" style="left: 0px; opacity: 1;">
+                <div class="box box1 list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t5.jpg' %}" width="250" height="690" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-545px;">
+                                    <span>产品系列</span><br />
+                                    <img src="{% static 'web/index_files/products.png' %}" alt="Products" width="167" height="23">
+                                    <div class="hr"></div>
+                                    <div class="stit"></div>
+                                    <a href="{% url 'polls:allProductView' %}" class="more"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t2.jpg' %}" width="250" height="345" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-172px;">
+                                    <span>车用尿素溶液</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t3.jpg' %}" width="250" height="345" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-172px;">
+                                    <span>敬请期待</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t4.jpg' %}" width="250" height="345" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-172px;">
+                                    <span>加注设备系列</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t6.jpg' %}" width="250" height="345" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-172px;">
+                                    <span>敬请期待</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t7.jpg' %}" width="250" height="345" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-172px;">
+                                    <span>敬请期待</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box list-item grid" onClick="location='{% url "polls:allProductView" %}'">
+                    <div class="pd10">
+                        <div class="box-preview">
+                            <div class="insetscroll">
+                                <img src="{% static 'web/index_files/images/t8.jpg' %}" width="250" height="345" />
+                                <div class="box-mask"></div>
+                                <div class="tit1" style="top:-172px;">
+                                    <span>敬请期待</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="i-se an-i" style="background:url({% static 'web/index_files/images/home_47.jpg' %}) no-repeat center">
+        <div class="toentit"><img src="{% static 'web/index_files/home_49.png' %}" alt="" width="855" height="46"></div>
+        <div class="tocntit">新闻中心</div>
+        <div class="tosentit"><img src="{% static 'web/index_files/home_56.png' %}" alt="" width="194" height="18"></div>
+        <div class="i-seb w1000">
+        {% if main %}
+            <div class="le">
+                <a href="{% url 'polls:new_detail' main.id %}" class="leimg"><img src="{{ MEDIA_URL }}{{ main.logo }}" alt="" width="495" height="235"></a>
+                <div class="con"> <a href="{% url 'polls:new_detail' main.id %}" class="more">more</a> <a href="" class="tit">{{ main.title }}</a><br>
+                    <a href="{% url 'polls:new_detail' main.id %}" class="txt">{{ main.text }} ...</a>
+                </div>
+            </div>
+            <div class="ri">
+                <ul>
+                    {% for i in list %}
+                        <li> <a href="{% url 'polls:new_detail' i.id %}" class="img"><img src="{{ MEDIA_URL }}{{ i.logo }}" alt="" width="" height="88" style="width: 130px; height: 104px;"></a>
+                            <div class="con"> <a href="{% url 'polls:new_detail' i.id %}" class="tit">{{i.title}} </a><br>
+                                <a href="{% url 'polls:new_detail' i.id %}" class="txt"> {{ i.text }}...</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                        {% comment %}
+                        <li> <a href="" class="img"><img src="{% static 'uploadfile/201903044745.jpg' %}" alt="" width="" height="88" style="width: 130px; height: 104px;"></a>
+                            <div class="con"> <a href="" class="tit">【福利】品质315，钜惠卡友活动全国联动，强势来袭！</a><br>
+                                <a href="" class="txt"> 一年一度的消费者权益保护日 “315”即将到来 在修理爱车的过程中 你有多少次 45度角仰望天空 ...</a>
+                            </div>
+                        </li>
+                        <li> <a href="" class="img"><img src="{% static 'uploadfile/201902259066.jpg' %}" alt="" width="" height="88" style="width: 130px; height: 104px;"></a>
+                            <div class="con"> <a href="" class="tit">【聚势前行】可兰素2019天津品牌客户答谢会圆满召开！</a><br>
+                                <a href="" class="txt"> 可兰素2019 天津 品牌客户答谢会 2019年2月23日（前天），可兰素携手天津 可兰素 合作伙...</a>
+                            </div>
+                        </li>
+                        {% endcomment %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="i-th an-i">
+            <div class="toentit"><img src="{% static 'web/index_files/home_65.png' %}" alt="" width="641" height="46"></div>
+            <div class="tocntit">解决方案</div>
+            <div class="tosentit"><img src="{% static 'web/index_files/home_16.png' %}" alt="" width="194" height="18"></div>
+            <div class="i-thb w1000">
+                <ul>
+                    <li>
+                        <div class="con"> <a href="" class="tit">SCR系统解决方案</a><br>
+                            <span class="entit"><img src="{% static 'web/index_files/home_69.png' %}" alt="Install new homes" width="214" height="18"></span><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">科技还原绿色生活</span> </div>
+                        <a href="" class="pic-a">
+                            <div class="clear-picshow">
+                                <img data-title="持畅防结晶车用尿素" src="{% static 'uploadfile/201901112027.jpg' %}" class="jpg  in-focus1 " alt="">
+{#                                <img data-title="SCR喷嘴除垢剂" src="{% static 'uploadfile/201901117782.jpg' %}" class="jpg " alt="">#}
+{#                                <img data-title="可兰素低硫润滑油" src="{% static 'uploadfile/201512234795.jpg' %}" class="jpg " alt="">#}
+                            </div>
+                        </a> <i></i>
+                    </li>
+                    <li class="li2"> <a href="" class="pic-a">
+                            <div class="clear-picshow">
+                                <img data-title="十六烷值提升剂" src="{% static 'uploadfile/201710269159.jpg' %}" class="jpg  in-focus1 " alt="">
+{#                                <img data-title="燃油性能提升剂 " src="{% static 'uploadfile/201710266467.jpg' %}" class="jpg " alt="">#}
+{#                                <img data-title="柴油降凝剂" src="{% static 'uploadfile/201710264774.jpg' %}" class="jpg " alt="">#}
+                            </div>
+                        </a>
+                        <div class="con"> <a href="" class="tit">燃油系统解决方案</a><br>
+                            <span class="entit"><img src="{% static 'web/index_files/hone_101.png' %}" alt="Old house renovation" width="214" height="18"></span><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">科技还原绿色生活</span> </div>
+                        <i></i>
+                    </li>
+                    <li>
+                        <div class="con"> <a href="" class="tit">润滑系统决方案</a><br>
+                            <span class="entit"><img src="{% static 'web/index_files/home_100.png' %}" alt="Engineering Case" width="246" height="18"></span><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">科技还原绿色生活</span> </div>
+                        <a href="" class="pic-a">
+                            <div class="clear-picshow">
+                                <img data-title="喷油嘴清洗剂 " src="{% static 'uploadfile/201710264890.jpg' %}" class="jpg  in-focus1 " alt="">
+{#                                <img data-title="十六烷值提升剂" src="{% static 'uploadfile/201710269982.jpg' %}" class="jpg " alt="">#}
+{#                                <img data-title="燃油性能提升剂 " src="{% static 'uploadfile/201710261853.jpg' %}" class="jpg " alt="">#}
+                            </div>
+                        </a> <i></i>
+                    </li>
+                    <li class="li2" style="bottom: 0; opacity: 1; "> <a href="" class="pic-a">
+                            <div class="clear-picshow">
+                                <img data-title="EGR系统DOC/POC清洗保护再生剂" src="{% static 'uploadfile/201512238554.jpg' %}" class="jpg  in-focus1 " alt="">
+{#                                <img data-title="DOC/POC专用低灰分柴油机油" src="{% static 'uploadfile/201512234076.jpg' %}" class="jpg " alt="">#}
+                            </div>
+                        </a>
+                        <div class="con"> <a href="" class="tit">EGR系统解决方案</a><br>
+                            <span class="entit"><img src="{% static 'web/index_files/home_82.png' %}" alt="Old house renovation" width="214" height="18"></span><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">科技还原绿色生活</span> </div>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="i-fo an-i">
+            <div class="toentit"><img src="{% static 'web/index_files/home_91.png' %}" alt="" width="636" height="46"></div>
+            <div class="tocntit">招商加盟</div>
+            <div class="tosentit"><img src="{% static 'web/index_files/home_16.png' %}" alt="" width="194" height="18"></div>
+            <div class="i-fob w1000">
+                <ul>
+                    <li class="even" style="background-image: url({% static 'web/index_files/images/q1.jpg' %}); left: 500px; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"> <span class="bg"></span> <span class="btit">我们的<br>
+                            优势</span>
+                        <div class="con"> <a href="" class="tit">共创共赢</a><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">与代理商共同成长一直是力众蓝天矢志不渝的发展之道，也是力众蓝天得以不断发展壮大的成功原因所在。</span><br>
+                            <a href="" class="more">+</a> </div>
+                    </li>
+                    <li class="odd" style="background-image: url({% static 'web/index_files/images/q2.jpg' %}); left: 1000px; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"> <span class="bg"></span> <span class="btit">我们的<br>
+                            支持</span>
+                        <div class="con"> <a href="" class="tit">共创共赢</a><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">与代理商共同成长一直是力众蓝天矢志不渝的发展之道，也是力众蓝天得以不断发展壮大的成功原因所在。</span><br>
+                            <a href="" class="more">+</a> </div>
+                    </li>
+                    <li class="even" style="background-image: url({% static 'web/index_files/images/q4.jpg' %}); left: 2000px; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"> <span class="bg"></span> <span class="btit">加入<br>
+                            流程</span>
+                        <div class="con"> <a href="" class="tit">共创共赢</a><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">与代理商共同成长一直是力众蓝天矢志不渝的发展之道，也是力众蓝天得以不断发展壮大的成功原因所在</span><br>
+                            <a href="" class="more">+</a> </div>
+                    </li>
+                    <li class="odd" style="background-image: url({% static 'web/index_files/images/q3.jpg' %}); left: 1500px; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"> <span class="bg"></span> <span class="btit">加入<br>
+                            申请</span>
+                        <div class="con"> <a href="" class="tit">共创共赢</a><br>
+                            <span class="hr"></span><br>
+                            <span class="txt">与代理商共同成长一直是力众蓝天矢志不渝的发展之道，也是力众蓝天得以不断发展壮大的成功原因所在。</span><br>
+                            <a href="" class="more">+</a> </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script src="{% static 'js/banner.js' %}" type="text/javascript" charset="utf-8"></script>
+        {# 新闻中心 #}
+        <script type="text/javascript">
+        $(".ri").eq(1).find("img").css({
+            width: "130px",
+            height: "104px"
+        })
+        for (var i = 0; i <= 4; i++) {
+            $(".i-fob li").eq(i).css("left", (i + 1) * 500 + "px");
+        }
+        $(window).scroll(function() {
+            scrollanimate()
+        })
+        $(".menub b").hide();
+        $(".menub").hover(function() {
+            $(".menub b").show();
+        }, function() {
+            $(".menub b").hide();
+        })
+        var ri = $(".ri dl dd");
+
+        index()
+        $(".leimg").hover(function() {
+            $(this).find("img").animate({
+                "width": "545px",
+                "height": "258px",
+                "marginTop": "0px",
+                "marginLeft": "0px"
+            }, 300)
+        }, function() {
+            $(this).find("img").animate({
+                "width": "495px",
+                "height": "235px",
+                "marginTop": "0px",
+                "marginLeft": "0px"
+            }, 300)
+        })
+        var titt = $(".i-thb li");
+        titt.eq(0).find(".txt").html($(".in-focus1").data("title"))
+        titt.eq(1).find(".txt").html($(".in-focus2").data("title"))
+        titt.eq(2).find(".txt").html($(".in-focus3").data("title"))
+
+        function dom(i) {
+            var dombox = $(".clear-picshow").eq(i).find("img");
+            return dombox;
+        }
+
+        function lendom(i) {
+            var domlen = $(".clear-picshow").eq(i).find("img:last");
+            return domlen
+        }
+
+        function pics(dom, foucs, parent) {
+            var index = $("." + foucs).index();
+            var last = dom.index();
+            var newpos = index == last ? 0 : index + 1;
+            parent.eq(newpos).addClass(foucs).siblings().removeClass(foucs);
+            dom.parents("li").find(".txt").html(parent.eq(newpos).data("title"))
+            parent.eq(newpos).fadeIn("slow").siblings().fadeOut("slow");
+        }
+
+        $(".i-thb").mouseenter(function() {
+            //console.log(0)
+            clearInterval(fun0, 2000)
+            clearInterval(fun1, 2000)
+            clearInterval(fun2, 2000)
+            clearInterval(fun3, 2000)
+        });
+
+        $(".i-thb").mouseleave(function() {
+            fun0 = setInterval('pics(lendom(0),"in-focus1",dom(0))', 2000);
+            fun1 = setInterval('pics(lendom(1),"in-focus2",dom(1))', 2000);
+            fun2 = setInterval('pics(lendom(2),"in-focus3",dom(2))', 2000);
+            fun3 = setInterval('pics(lendom(3),"in-focus4",dom(3))', 2000);
+        })
+        var fun0 = setInterval('pics(lendom(0),"in-focus1",dom(0))', 2000);
+        var fun1 = setInterval('pics(lendom(1),"in-focus2",dom(1))', 2000);
+        var fun2 = setInterval('pics(lendom(2),"in-focus3",dom(2))', 2000);
+        var fun3 = setInterval('pics(lendom(3),"in-focus4",dom(3))', 2000);
+
+
+        $(function() {
+            $(".ri").on('mouseenter mouseleave', '.list-item .insetscroll', function(e) {
+                var fx = getDir(e, $(this));
+
+                if (e.type == "mouseout" || e.type == "mouseleave") {
+                    iconLeave($(this).find(".box-mask-detail"), $(this).find(".box-mask"), fx);
+                } else {
+                    iconEnter($(this).find(".box-mask-detail"), $(this).find(".box-mask"), fx);
+                }
+
+            })
+
+            function getDir(e, data) {
+                var size = {};
+                size.w = data.innerWidth();
+                size.h = data.innerHeight();
+                var pos = data.offset();
+                var x = (e.pageX - pos.left - (size.w / 2)) * (size.w > size.h ? (size.h / size.w) : 1);
+                var y = (e.pageY - pos.top - (size.h / 2)) * (size.h > size.w ? (size.w / size.h) : 1);
+                var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+                return direction;
+            }
+
+            function iconEnter(i, b, f) {
+                switch (f) {
+                    case 0:
+                        b.css({ top: "-100%", left: 0 }).stop(true, true).animate({ top: 0 }, 500);
+                        // i.css({top:295,left:"50%"}).stop(true,true).animate({top: "50%"}, 500);
+                        break;
+                    case 1:
+                        b.css({ top: 0, left: "100%" }).stop(true, true).animate({ left: 0 }, 500);
+                        // i.css({top:"50%",left:-57}).stop(true,true).animate({left: "50%"}, 500);
+                        break;
+                    case 2:
+                        b.css({ top: "100%", left: 0 }).stop(true, true).animate({ top: 0 }, 500);
+                        // i.css({top:-57,left:"50%"}).stop(true,true).animate({top: "50%"}, 500);
+                        break;
+                    case 3:
+                        b.css({ top: 0, left: "-100%" }).stop(true, true).animate({ left: 0 }, 500);
+                        // i.css({top:"50%",left:280}).stop(true,true).animate({left: "50%"}, 500);
+                        break;
+                }
+
+            }
+
+            function iconLeave(i, b, f) {
+                switch (f) {
+                    case 0:
+                        b.stop(true, true).animate({ top: "-100%" }, 500);
+                        // i.stop(true,true).animate({top: 295}, 500);
+                        break;
+                    case 1:
+                        b.stop(true, true).animate({ left: "100%" }, 500);
+                        // i.stop(true,true).animate({left: -57}, 500);
+                        break;
+                    case 2:
+                        b.stop(true, true).animate({ top: "100%" }, 500);
+                        // i.stop(true,true).animate({top: -57}, 500);
+                        break;
+                    case 3:
+                        b.stop(true, true).animate({ left: "-100%" }, 500);
+                        // i.stop(true,true).animate({left: 280}, 500);
+                        break;
+                }
+
+            }
+
+        });
+        </script>
+    {% include "polls/footer.html" %}
+    </body>
+
+</html>

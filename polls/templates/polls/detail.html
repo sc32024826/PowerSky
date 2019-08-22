@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    {% include "polls/Menu.html" %}
+    <div class="prolist-fi">
+        <div class="wrap" id="wrapper" data-page="2">
+            <div class="container" id="container" style="height:auto">
+            {% autoescape off %}
+                {% if new %}
+                    <div class="dk_div1">{{ new.tt }}</div>
+                    <div class="dk_div2">日期:{{new.date}} &nbsp;&nbsp;观看次数: {{ new.read_count }} &nbsp;&nbsp;作者：{{ new.author }}</div>
+                    <div class="dk_div3">
+
+                            {{ new.context }}
+
+                    </div>
+                {% endif %}
+                {% if product %}
+                    <div class="dk_div1">{{ product.name }}</div>
+                    <div class="dk_div2">日期:{{product.date}} &nbsp;&nbsp;观看次数: {{ product.read_count }} &nbsp;&nbsp;作者：{{ product.author }}</div>
+                    <div class="dk_div3">
+                        {{ product.context }}
+                    </div>
+                {% endif %}
+            {% endautoescape %}
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/blocksit.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    {% include "polls/footer.html" %}

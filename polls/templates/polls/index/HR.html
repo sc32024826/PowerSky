@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{{title}}</title>
+    <meta name="Keywords" content="{{title}}">
+    <meta name="Description" content="{{title}}">
+    <meta name="renderer" content="webkit">
+    <link href="{% static 'favicon.ico' %}" rel="shortcut icon">
+    <script>
+        var STATIC_URL = "static/";
+        var GLOBAL_URL = "";
+        var UPLOAD_URL = "upload/" ;
+        var SITE_URL = "";
+    </script>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css" media="screen">
+    <script src="{% static 'js/jquery.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/prefixfree.min.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/jquery.mousewheel.js' %}" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'css/cx.css' %}" type="text/css" media="screen">
+    <script src="{% static 'js/tools.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/template.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/site/init.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/site/ui.js' %}" type="text/javascript" charset="utf-8"></script>
+    <SCRIPT type=text/javascript src="{% static 'js/gd.js'%}"></SCRIPT>
+    <SCRIPT type=text/javascript src="{% static 'js/qh.js'%}"></SCRIPT>
+    <script>
+        function MM_preloadImages() { //v3.0
+            var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+            var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+            if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+        }
+
+        function MM_swapImgRestore() { //v3.0
+            var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+        }
+
+        function MM_findObj(n, d) { //v4.01
+            var p,i,x;
+            if(!d) d=document;
+            if((p=n.indexOf("?"))>0&&parent.frames.length) {
+                d=parent.frames[n.substring(p+1)].document;
+                n=n.substring(0,p);}
+            if(!(x=d[n])&&d.all) x=d.all[n];
+            for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+            for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+            if(!x && d.getElementById) x=d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+            document.getElementById("dk1").style.display='none';
+            document.getElementById("dk2").style.display='none';
+            document.getElementById("dk3").style.display='none';
+            document.getElementById("dk4").style.display='none';
+            document.getElementById("Image1").src='{% static "web/rlzy_files/images/a.jpg"%}'
+            document.getElementById("Image2").src='{% static "web/rlzy_files/images/b.jpg"%}';
+            document.getElementById("Image3").src='{% static "web/rlzy_files/images/c.jpg"%}';
+            document.getElementById("Image4").src='{% static "web/rlzy_files/images/d.jpg"%}';
+
+            var i,j=0,x,a=MM_swapImage.arguments;
+            document.MM_sr=new Array;
+            for(i=0;i<(a.length-2);i+=3)
+            if ((x=MM_findObj(a[i]))!=null){
+                document.MM_sr[j++]=x;
+                if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];
+
+                var dk=x.id;
+
+                spstr = dk.split("");
+                var dk1=spstr[spstr.length-1];
+                document.getElementById("dk"+dk1).style.display='block';
+              if(dk1==1){  document.getElementById("Image1").src='{% static "web/rlzy_files/images/aa.jpg"%}';}
+              if(dk1==2){  document.getElementById("Image2").src='{% static "web/rlzy_files/images/bb.jpg"%}';}
+              if(dk1==3){  document.getElementById("Image3").src='{% static "web/rlzy_files/images/cc.jpg"%}';}
+              if(dk1==4){  document.getElementById("Image4").src='{% static "web/rlzy_files/images/dd.jpg"%}';}
+           }
+        }
+    </script>
+
+</head>
+<body>
+    {% include "polls/Menu.html" %}
+    <div class="in-banner" style="background:url({% static 'web/news_files/company_02.jpg' %}) no-repeat center">
+        <div class="bannertxt w1000">
+            <img src="{% static 'web/gywm_files/company_02.png' %}"  width="852" height="88" class="txt1">
+            <div class="txt5">
+                <img src="{% static 'web/gywm_files/company_04.png' %}"  width="176" height="18"  class="txt51">
+                <span class="hr"></span>
+                <span class="txt52">科技还原绿色生活</span>
+                <span class="txt53"><a href="" >走进力众蓝天</a></span>
+                <a class="btn"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pro-fi">
+        <div class="intoentit"><img src="{% static 'web/rlzy_files/culture_01.png' %}" alt="Brand Profile" width="326" height="34"></div>
+        <div class="intocntit">人才理念</div>
+    </div>
+    <div class="cul-se">
+            <div class="leri  w1000">
+            <div class="le" style="opacity: 1; margin-left: 0px;">
+                <p>
+                    <img src="{% static 'web/rlzy_files/culture_03.jpg' %}" width="452" height="150" />
+                </p>
+                <p>
+                    <br />
+                </p>
+                <p>
+                    <span style="font-size:14px;">我们力图提供广阔的职业发展平台，激发每一位员工的潜能，在工作中获得职位的提升、能力的提升、成就的提升，实现员工的自我价值。 我们为每位员工提供具有竞争力的薪酬及福利， 注重个人发展与培训机会，着力打造领军型人才、全球性人才、本土化人才团队。</span>
+                </p>
+                <p>
+                    <br />
+                </p>
+                <p>
+                    <span style="font-size:14px;">人才理念：高潜质，高意愿，高待遇</span>
+                </p>
+                <p class="p1">
+                    <img src="{% static 'web/rlzy_files/company_40.jpg'%}" width="21" height="1" />
+                </p>
+                <div class="btn">
+                    <img src="{% static 'web/rlzy_files/culture_14.jpg'%}" width="56" height="56" />
+                </div>
+            </div>
+            <div class="ri" style="opacity: 1; margin-right: 38px;"> <img src="{% static 'web/rlzy_files/1430710662478mg4u.jpg'%}" width="328" height="468"> </div>
+        </div>
+    </div>
+    <div class="leri2" style="background:#f4f4f4">
+        <div class="leri  w1000">
+            <div class="pro-fi">
+                <div class="intoentit"><img src="{% static 'web/rlzy_files/culture_11.png'%}" alt="Brand Culture" width="353" height="34"></div>
+                <div class="intocntit">员工风采</div>
+            </div>
+            <p style="text-align:center;">
+                加入可兰素，成为可兰素的一份子，梦想就从这里开始！我们期待你的加入！
+            </p>
+            <p style="text-align:center;">
+                <img src="{% static 'web/rlzy_files/20160108014005_17061.jpg'%}" alt="" />
+            </p>
+        </div>
+    </div>
+    <div class="clear clear1"></div>
+        <div class="leri  w1000">
+        <div class="pro-fi">
+            <div class="intoentit"><img src="{% static 'web/rlzy_files/culture_13.png'%}" alt="Brand Culture" width="400" height="34"></div>
+            <div class="intocntit">社会招聘</div>
+        </div>
+        <div class=rollphotos style="padding:50px 0;">
+            <div class=blk_29>
+                <div class=LeftBotton id=LeftArr style="top:80px;"></div>
+                <div class="Cont" id=ISL_Cont_1>
+                    <!-- 图片列表 begin -->
+                    {% for job in jobs %}
+                    <div class=shzp>
+                        <h4>{{ job.jobName }}</h4>
+                        <br>
+                        <p>招聘人数 : {{job.needCount}}人<br>
+                            工作地点 : {{job.workPlace}}<br>
+                            工作经验 : {{job.workYears}}年以上经验<br>
+                            发布时间 : {{job.pushData}}<br>
+                            最低学历 : {{job.education}}<br>
+                            <br>
+                            <span onClick="qh8({{job.pk}})">>>查看详情</span></p>
+                        <br>
+                        <br>
+                    </div>
+                    {% endfor %}
+                    <!-- 图片列表 end -->
+                </div>
+                <div class=RightBotton id=RightArr style="top:80px;"></div>
+            </div>
+
+        </div>
+        {% for job in jobs %}
+            <div id="popDiv{{job.pk}}" class="mydiv" style="display:none;">
+            <div class="l">
+                <div class="d0">{{ job.jobName }}</div>
+                <div class="d1">工作经验:{{job.workYears}}年以上经验&nbsp;&nbsp;&nbsp;&nbsp; 招聘人数:{{job.needCount}}人 &nbsp;&nbsp;&nbsp;&nbsp;工作地点: {{job.workPlace}}</div>
+                <div class="d2">最低学历:{{job.education}} &nbsp;&nbsp;&nbsp;&nbsp;发布时间: {{job.pushData}} </div>
+                <div class="d3">
+                    {% autoescape off %}
+                    {{ job.content }}
+                    {% endautoescape %}
+                </div>
+            </div>
+            <div class="r"><img src="{% static 'web/rlzy_files/4.png'%}" onClick="qh9({{job.pk}})"></div>
+        </div>
+        <div  class="bg1" style="display:none;"></div>
+        {% endfor %}
+    </div>
+    <div class="clear clear1"></div>
+        <div class="leri2" style="background:#f4f4f4; min-height:500px;">
+        <div class="leri  w1000">
+            <div class="pro-fi">
+                <div class="intoentit"><img src="{% static 'web/rlzy_files/culture_21.png'%}" alt="Brand Culture" width="400" height="34"></div>
+                <div class="intocntit">校园招聘</div>
+            </div>
+            <div class="hover">
+                <ul>
+                    <li><a href="javascript:void(0)"><img src="{% static 'web/rlzy_files/images/a.jpg'%}" id="Image1" onClick="MM_swapImage('Image1','','static/web/rlzy_files/images/aa.jpg',1)"></a></li>
+                    <li><a href="javascript:void(0)"><img src="{% static 'web/rlzy_files/images/b.jpg'%}" id="Image2" onClick="MM_swapImage('Image2','','static/web/rlzy_files/images/bb.jpg',1)"></a></li>
+                    <li><a href="javascript:void(0)"><img src="{% static 'web/rlzy_files/images/c.jpg'%}" id="Image3" onClick="MM_swapImage('Image3','','static/web/rlzy_files/images/cc.jpg',1)"></a></li>
+                    <li><a href="javascript:void(0)"><img src="{% static 'web/rlzy_files/images/d.jpg'%}" id="Image4" onClick="MM_swapImage('Image4','','static/web/rlzy_files/images/dd.jpg',1)"></a></li>
+                </ul>
+            </div>
+            <div class="wz" id="dk1">
+            </div>
+            <div class="wz" id="dk2">
+            </div>
+            <div class="wz" id="dk3">
+            </div>
+            <div class="wz" id="dk4">
+            </div>
+        </div>
+    </div>
+    <div class="clear clear1"></div>
+
+
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+    {% include "polls/footer.html" %}
+    <script type="text/javascript">
+    $(function() {
+        culscroll()
+        window.onload = function() {
+            prozc();
+        }
+        $(window).scroll(function() {
+            culscroll();
+        })
+    })
+    </script>
+    </body>
+
+</html>

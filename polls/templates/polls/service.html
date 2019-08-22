@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    {% include "polls/Menu.html" %}
+
+    <div class="in-banner" style="background:url({% static 'web/gywm_files/company_02.png' %}) no-repeat center">
+        <div class="bannertxt w1000">
+            <img src="{% static 'web/news_files/company_01.png' %}" width="852" height="88" class="txt1">
+            <div class="txt5">
+                <img src="{% static 'web/news_files/company_04.png' %}" width="176" height="18" class="txt51">
+                <span class="hr"></span>
+                <span class="txt52">科技还原绿色生活</span>
+                <span class="txt53"><a href="?m=contacts&a=l&id=356">新闻中心</a></span>
+                <a class="btn"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pro-se w1000">
+        <div class="pro-fi">
+            <div class="intoentit"><img src="{% static 'web/gywm_files/359.png' %}" alt="Brand Profile" width="326" height="34"></div>
+            <div class="intocntit">服务理念</div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+        culscroll()
+        window.onload=function(){
+            prozc();
+        }
+        $(window).scroll(function(){
+            culscroll();
+        });
+    })
+    </script>
+
+{% include "polls/footer.html" %}
+</body>
+
+</html>

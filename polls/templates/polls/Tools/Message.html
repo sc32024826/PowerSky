@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    {% include "polls/Tools/head.html" %}
+<body>
+    {% include "polls/Menu.html" %}
+
+    <h1 class="center">{{ message }}</h1>
+
+    {% include "polls/footer.html" %}
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

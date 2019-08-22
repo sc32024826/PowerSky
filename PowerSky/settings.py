@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -81,8 +84,14 @@ WSGI_APPLICATION = 'PowerSky.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
+        'NAME': 'hdm705192679_db',  # 数据库名，先前创建的
+        'USER': 'hdm705192679',     # 用户名，可以自己创建用户
+        'PASSWORD': 'RBg1KNd88CO8OdpBk3An',  # 密码
+        'HOST': 'hdm705192679.my3w.com',  # mysql服务所在的主机ip 118.31.244.35
+        'PORT': '3306',         # mysql服务端口
     }
 }
 

@@ -6,10 +6,11 @@ from django.http import HttpResponse
 from polls.form import JoinForm
 from .models import Products, MyNews, JoinUs, Banner, JobRequire
 from django.views import generic
-from bs4 import BeautifulSoup
 import re
 
 # 网站默认首页
+
+
 def index(request):
     # banner_list = get_list_or_404(Banner)[:5]
     try:
@@ -19,7 +20,7 @@ def index(request):
 
     num = len(banner_list)
 
-    xx = range(1, num+1)
+    xx = range(1, num + 1)
 
     try:
         news = MyNews.objects.order_by('date')[:4]      # 根据日期排列 读取前4条新闻
@@ -30,7 +31,7 @@ def index(request):
 
     for new in news:
         # 忽略警告,必须在循环内定义,否则会覆盖所有dic
-        dic = {}
+        dic = dict()
         # print(new)
         dic['id'] = new.id
         dic['logo'] = new.logo       # 获取新闻列表中单个新闻的logo图片地址
@@ -38,7 +39,7 @@ def index(request):
         dic['title'] = new.tt       # 获取新闻标题
         # print(dic['title'])
         # 获取新闻主要内容的首行文字,使用正则表达式 去掉html 标签
-        txt = new.context.replace('&nbsp;','')
+        txt = new.context.replace('&nbsp;', '')
         dr = re.compile(r'<[^>]+>', re.S)
         dd = dr.sub('', txt)
         dic['text'] = dd[:60]
@@ -280,7 +281,7 @@ def submit_process(request):
     print(po)
     # todo
     n = JoinUs()
-    n.product =po.get("product_name")
+    n.product = po.get("product_name")
     n.area = po.get("area")
     n.name = po.get("name")
     n.tel = po.get("tel")
@@ -334,5 +335,3 @@ class MyListView(generic.ListView):
 
     def get_queryset(self):
         return JoinUs.objects.all()
-
-

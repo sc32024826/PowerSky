@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3554d53a-2ea8-45c0-8d53-c28288b1ff24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PowerSky/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PowerSky/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +164,7 @@
       <workItem from="1566612029052" duration="601000" />
       <workItem from="1566621536152" duration="202000" />
       <workItem from="1566622087308" duration="416000" />
-      <workItem from="1566623193883" duration="72000" />
+      <workItem from="1566623193883" duration="1085000" />
     </task>
     <task id="LOCAL-00001" summary="数据库修改为mysql">
       <created>1566459968427</created>
@@ -202,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566550659110</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="根目录下 增加 runtime 和 requirements">
+      <created>1566623423170</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566623423170</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +232,8 @@
     <MESSAGE value="数据库修改为mysql" />
     <MESSAGE value="修改后台路径" />
     <MESSAGE value="删除大文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除大文件" />
+    <MESSAGE value="根目录下 增加 runtime 和 requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="根目录下 增加 runtime 和 requirements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

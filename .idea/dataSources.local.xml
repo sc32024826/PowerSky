@@ -6,5 +6,9 @@
       <auth-required>false</auth-required>
       <schema-mapping />
     </data-source>
+    <data-source name="Django default" uuid="168dbca5-d2c5-46da-9667-2729e1489258">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3554d53a-2ea8-45c0-8d53-c28288b1ff24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,7 +165,7 @@
       <workItem from="1566622087308" duration="416000" />
       <workItem from="1566623193883" duration="1085000" />
       <workItem from="1566796000371" duration="612000" />
-      <workItem from="1566798519012" duration="389000" />
+      <workItem from="1566798519012" duration="2074000" />
     </task>
     <task id="LOCAL-00001" summary="数据库修改为mysql">
       <created>1566459968427</created>
@@ -211,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566623423170</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="删除 阿里云 mysql 信息">
+      <created>1566798931541</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566798931541</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +241,8 @@
     <MESSAGE value="修改后台路径" />
     <MESSAGE value="删除大文件" />
     <MESSAGE value="根目录下 增加 runtime 和 requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="根目录下 增加 runtime 和 requirements" />
+    <MESSAGE value="删除 阿里云 mysql 信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除 阿里云 mysql 信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

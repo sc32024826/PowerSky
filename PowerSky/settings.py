@@ -88,10 +88,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
-        'NAME': 'hdm705192679_db',  # 数据库名，先前创建的
-        'USER': 'hdm705192679',     # 用户名，可以自己创建用户
-        'PASSWORD': 'RBg1KNd88CO8OdpBk3An',  # 密码
-        'HOST': 'hdm705192679.my3w.com',  # mysql服务所在的主机ip 118.31.244.35
+        'NAME': 'mydb',  # 数据库名，先前创建的
+        'USER': 'root',     # 用户名，可以自己创建用户
+        'PASSWORD': '18705735690',  # 密码
+        'HOST': 'localhost',  # mysql服务所在的主机ip 118.31.244.35
         'PORT': '3306',         # mysql服务端口
     }
 }

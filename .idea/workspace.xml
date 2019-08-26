@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3554d53a-2ea8-45c0-8d53-c28288b1ff24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-    </list>
+    <list default="true" id="3554d53a-2ea8-45c0-8d53-c28288b1ff24" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +162,7 @@
       <workItem from="1566621536152" duration="202000" />
       <workItem from="1566622087308" duration="416000" />
       <workItem from="1566623193883" duration="1085000" />
+      <workItem from="1566796000371" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="数据库修改为mysql">
       <created>1566459968427</created>

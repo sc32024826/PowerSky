@@ -26,9 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'crifbwt--l6dr9q15uiq)z8ei$si@_7(te+6tal0bb^4c22076'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
+    "18.223.119.125",
+    "localhost",
 
 ]
 
@@ -136,6 +138,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "./polls/static"),
 )
+STATIC_ROOT = os.path.join(BASE_DIR, "/home/ubuntu/www")
+
 
 # 添加图片上传路径
 MEDIA_URL = '/media/'

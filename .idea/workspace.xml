@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3554d53a-2ea8-45c0-8d53-c28288b1ff24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/uwsgi.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -171,7 +170,7 @@
       <workItem from="1566806156217" duration="1915000" />
       <workItem from="1566869682096" duration="9000" />
       <workItem from="1566869768816" duration="70000" />
-      <workItem from="1566873428038" duration="722000" />
+      <workItem from="1566873428038" duration="1591000" />
     </task>
     <task id="LOCAL-00001" summary="数据库修改为mysql">
       <created>1566459968427</created>
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566808372434</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修改 uwsgi 配置">
+      <created>1566874229651</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1566874229651</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +270,8 @@
     <MESSAGE value="删除 阿里云 mysql 信息" />
     <MESSAGE value="修改 aws 数据库信息" />
     <MESSAGE value="删除不必要的package 根目录新增 uwsgi.ini" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除不必要的package 根目录新增 uwsgi.ini" />
+    <MESSAGE value="修改 uwsgi 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改 uwsgi 配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

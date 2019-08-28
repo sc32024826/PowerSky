@@ -47,12 +47,12 @@ def index(request):
         my_list.append(dic)
 
     # print(my_list)
-    main = my_list[0]
+
     content = {
         'title': '力众蓝天',
         'banner_list': banner_list,
         'num': xx,
-        'main': main,
+        'main': my_list[0],
         'list': my_list[1:],
     }
     return render(request, 'polls/index/index.html', content)

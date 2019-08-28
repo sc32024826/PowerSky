@@ -132,11 +132,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "./polls/static"),
-)
-STATIC_ROOT = os.path.join(BASE_DIR, "/home/ubuntu/www")
 
+# 服务器 项目路径为/home/ubuntu/www/root
+# 静态链接应当包含在 项目里,这里还未修改 
+STATIC_ROOT = os.path.join(BASE_DIR, "/home/ubuntu/www/collectstatic")
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 # 添加图片上传路径
 MEDIA_URL = '/media/'

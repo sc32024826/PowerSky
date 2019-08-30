@@ -24,13 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'crifbwt--l6dr9q15uiq)z8ei$si@_7(te+6tal0bb^4c22076'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    "18.223.119.125",
-    "localhost",
-    "127.0.0.1"
-
+    "106.52.155.253"
 ]
 
 
@@ -135,8 +132,8 @@ STATIC_URL = '/static/'
 
 
 # 服务器 项目路径为/home/ubuntu/www/root
-# 静态链接应当包含在 项目里,这里还未修改 
-STATIC_ROOT = os.path.join(BASE_DIR, "../collectstatic")
+# 静态链接应当包含在 项目里, ../static 表示将静态文件收集到与项目主目录同级的位置
+STATIC_ROOT = os.path.join(BASE_DIR, "../static")
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),

@@ -45,6 +45,7 @@ class Products(models.Model):
 
     class Meta:
         ordering = ['date']
+        verbose_name_plural = '产品'
 
 
 # 新闻类数据库
@@ -82,6 +83,7 @@ class MyNews(models.Model):
 
     class Meta:
         ordering = ['date']
+        verbose_name_plural = '新闻'
 
 
 # 加盟信息表单
@@ -94,6 +96,9 @@ class JoinUs(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = '加盟商'
+
 
 # 首页banner轮播图片
 class Banner(models.Model):
@@ -102,6 +107,9 @@ class Banner(models.Model):
         default='',
         verbose_name='分辨率1920X758,非白底图片更优'
     )
+
+    class Meta:
+        verbose_name_plural = '首页轮播图'
 
 
 # 招聘
@@ -118,3 +126,6 @@ class JobRequire(models.Model):
         toolbars='full',
         verbose_name='内容',
         )
+
+    class Meta:
+        verbose_name_plural = "招聘信息"

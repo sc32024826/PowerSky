@@ -29,7 +29,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "106.52.155.253",
     "www.lzhb.site",
-    "lzhb.site"
+    "lzhb.site",
+    '127.0.0.1'
 ]
 
 
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DjangoUeditor',
+    'xadmin',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [

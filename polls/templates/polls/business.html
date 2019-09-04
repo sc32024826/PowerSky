@@ -4,7 +4,7 @@
     {% include "polls/Tools/head.html" %}
 <body>
     {% include "polls/Menu.html" %}
-    <div class="in-banner" style="background:url({% static 'web/zszq_files/images/company_02.jpg'%}) no-repeat center">
+    <div class="in-banner" style="background:url(' {% static "web/zszq_files/images/company_02.jpg" %} ') no-repeat center">
         <div class="bannertxt w1000">
             <img src="{% static 'web/gywm_files/company_01.png'%}" width="852" height="88" class="txt1">
             <div class="txt5">
@@ -134,20 +134,20 @@
         </div>
     </div>
 
-        <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript">
-        $(function(){
-            culscroll()
-            window.onload=function(){
-                prozc();
-            }
-            $(window).scroll(function(){
-                culscroll();
-            });
-        })
-        </script>
+    <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+        culscroll()
+        window.onload=function(){
+            prozc();
+        }
+        $(window).scroll(function(){
+            culscroll();
+        });
+    })
+    </script>
 
     {% include "polls/footer.html" %}
-    </body>
+</body>
 
 </html>

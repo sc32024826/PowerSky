@@ -4,6 +4,7 @@ from .models import Products, MyNews, JoinUs, JobRequire, Banner
 
 class PAdmin(object):
     list_display = ['name', 'type_text']
+    style_fields = {'context': 'ueditor'}
 
 
 class JoinAdmin(object):
@@ -12,6 +13,7 @@ class JoinAdmin(object):
 
 class NewsAdmin(object):
     list_display = ['tt', 'logo', 'read_count', 'author', 'date']
+    style_fields = {'context': 'ueditor'}
 
 
 class JobStyle(object):

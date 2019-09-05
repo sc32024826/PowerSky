@@ -3,3 +3,7 @@
 /Venv
 /.vscode
 workspace.xml
+DjangoUeditor/__pycache__
+PowerSky/__pycache__
+polls/__pycache__
+db.sqlite3

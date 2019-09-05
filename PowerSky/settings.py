@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from django.utils.translation import ungettext_lazy as _
+# from django.utils.translation import ungettext_lazy as _
 # import MySQLdb
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'crifbwt--l6dr9q15uiq)z8ei$si@_7(te+6tal0bb^4c22076'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "106.52.155.253",
@@ -89,12 +89,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
-        # 'NAME': 'mydb',  # 数据库名，先前创建的
-        # 'USER': 'root',     # 用户名，可以自己创建用户
-        # 'PASSWORD': '18705735690',  # 密码
-        # 'HOST': 'localhost',  # mysql服务所在的主机ip 118.31.244.35
-        # 'PORT': '3306',         # mysql服务端口
     }
 }
 
@@ -139,7 +133,7 @@ STATIC_URL = '/static/'
 
 # 服务器 项目路径为/home/ubuntu/www/root
 # 静态链接应当包含在 项目里, static 表示将静态文件收集到项目根目录
-STATIC_ROOT = os.path.join(BASE_DIR, "CollectStatic")
+STATIC_ROOT = os.path.join(BASE_DIR, "../../CollectStatic")
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "polls/static"),

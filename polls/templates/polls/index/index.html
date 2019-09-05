@@ -11,40 +11,12 @@
         {% if banner_list %}
         <ul class="jslist">
             {% for banner in banner_list %}
-                <li style="background:url({{ MEDIA_URL }}{{ banner.url }}) no-repeat center">
+                <li style="background:url('{{ MEDIA_URL }}{{ banner.url }}') no-repeat center">
                     <a href="" style="position: absolute; display: block; width: 100%; height: 100%; z-index: 2"></a>
                     <div class="bannertxt w1000">
                     </div>
                 </li>
             {% endfor %}
-
-
-            {% comment %}
-            <li style="background:url({% static 'uploadfile/201901287196.jpg' %}) no-repeat center">
-                <div class="bannertxt w1000">
-{#                    <img src="{% static 'web/img/home_14.png' %}" width="734" height="91" class="txt1">#}
-{#                    <img src="{% static 'web/img/home_18.png' %}" width="16" height="17" class="txt2">#}
-{#                    <img src="{% static 'web/img/home_22.png' %}" width="409" height="88" class="txt3">#}
-                </div>
-            </li>
-
-            <li style="background:url({% static 'uploadfile/201603081536.jpg' %}) no-repeat center">
-                <a href="" style="position: absolute; display: block; width: 100%; height: 100%; z-index: 2"></a>
-                <div class="bannertxt w1000">
-{#                    <img src="{% static 'web/img/home_14.png' %}" width="734" height="91" class="txt1">#}
-{#                    <img src="{% static 'web/img/home_18.png' %}" width="16" height="17" class="txt2">#}
-{#                    <img src="{% static 'web/img/home_22.png' %}" width="409" height="88" class="txt3">#}
-                </div>
-            </li>
-            <li style="background:url({% static 'uploadfile/201903019704.jpg' %}) no-repeat center">
-                <a href="" style="position: absolute; display: block; width: 100%; height: 100%; z-index: 2"></a>
-                <div class="bannertxt w1000">
-                    <img src="{% static 'web/img/home_14.png' %}" width="734" height="91" class="txt1">
-                    <img src="{% static 'web/img/home_18.png' %}" width="16" height="17" class="txt2">
-                    <img src="{% static 'web/img/home_22.png' %}" width="409" height="88" class="txt3">
-                </div>
-            </li>
-            {% endcomment %}
 
         </ul>
         {% endif %}
@@ -203,16 +175,12 @@
                         <a href="" class="pic-a">
                             <div class="clear-picshow">
                                 <img data-title="持畅防结晶车用尿素" src="{% static 'uploadfile/201901112027.jpg' %}" class="jpg  in-focus1 " alt="">
-{#                                <img data-title="SCR喷嘴除垢剂" src="{% static 'uploadfile/201901117782.jpg' %}" class="jpg " alt="">#}
-{#                                <img data-title="可兰素低硫润滑油" src="{% static 'uploadfile/201512234795.jpg' %}" class="jpg " alt="">#}
                             </div>
                         </a> <i></i>
                     </li>
                     <li class="li2"> <a href="" class="pic-a">
                             <div class="clear-picshow">
                                 <img data-title="十六烷值提升剂" src="{% static 'uploadfile/201710269159.jpg' %}" class="jpg  in-focus1 " alt="">
-{#                                <img data-title="燃油性能提升剂 " src="{% static 'uploadfile/201710266467.jpg' %}" class="jpg " alt="">#}
-{#                                <img data-title="柴油降凝剂" src="{% static 'uploadfile/201710264774.jpg' %}" class="jpg " alt="">#}
                             </div>
                         </a>
                         <div class="con"> <a href="" class="tit">燃油系统解决方案</a><br>

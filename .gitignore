@@ -1,9 +1,15 @@
+# 忽略idea文件
 /.idea
-/__pycache__
+# 忽略所有 __pycache__ 文件
+**/__pycache__
+# 忽略虚拟环境
 /Venv
+# 忽略 vscode 配置文件
 /.vscode
 workspace.xml
-DjangoUeditor/__pycache__
-PowerSky/__pycache__
-polls/__pycache__
+# 忽略数据库文件
 db.sqlite3
+# 忽略 uwsgi文件
+uwsgi.log
+uwsgi.pid
+uswgi.status

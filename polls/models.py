@@ -19,7 +19,10 @@ class Products(models.Model):
     src = models.ImageField(
         upload_to="org/%Y/%m",
         default='org/2019/08/ico.png',
-        verbose_name="产品图片")
+        verbose_name="产品图片",
+        null = True,
+        blank = True
+    )
     date = models.DateField('编写日期')
     read_count = models.IntegerField(default=0, verbose_name='阅读量')
     author = models.CharField(max_length=100, verbose_name='作者')
@@ -33,7 +36,7 @@ class Products(models.Model):
         },
         settings={},
         verbose_name='内容'
-                           )
+    )
     type_num = models.IntegerField(default=0, verbose_name='产品分类号,0:车用尿素,1:加注设备')
     effect = models.CharField(max_length=100, verbose_name='产品作用简介', null=True, blank=True)
     type_text = models.CharField(max_length=50, verbose_name='产品型号', null=True, blank=True)
@@ -70,12 +73,17 @@ class MyNews(models.Model):
             'imageMaxSize': 1204000
         },
         settings={},
-        verbose_name='内容'
-                           )
+        verbose_name='内容',
+        null = True,
+        blank = True
+    )
     logo = models.ImageField(
         upload_to="org/%Y/%m",
         default='',
-        verbose_name="新闻图片")
+        verbose_name="新闻图片",
+        null = True,
+        blank = True
+    )
     news_type = models.IntegerField(default=0, verbose_name='新闻类别')
 
     def __str__(self):

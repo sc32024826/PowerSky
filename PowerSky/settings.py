@@ -134,7 +134,7 @@ STATIC_URL = '/static/'
 
 # 服务器 项目路径为/home/ubuntu/www/root
 # 静态链接应当包含在 项目里, static 表示将静态文件收集到项目根目录
-STATIC_ROOT = os.path.join(BASE_DIR, "../../CollectStatic")
+STATIC_ROOT = os.path.join(BASE_DIR, "../CollectStatic")
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "polls/static"),

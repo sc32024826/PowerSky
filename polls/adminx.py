@@ -5,23 +5,28 @@ from .models import Products, MyNews, JoinUs, JobRequire, Banner
 class PAdmin(object):
     list_display = ['name', 'type_text']
     style_fields = {'context': 'ueditor'}
+    model_icon = 'fa fa-truck'
 
 
 class JoinAdmin(object):
     list_display = ['Product', 'name', 'area', 'tel']
+    model_icon = 'fa fa-vcard'
 
 
 class NewsAdmin(object):
     list_display = ['tt', 'logo', 'read_count', 'author', 'date']
     style_fields = {'context': 'ueditor'}
+    model_icon = 'fa fa-newspaper-o'
 
 
 class JobStyle(object):
     list_display = ['jobName', 'needCount', 'workPlace', 'education', 'workYears']
+    model_icon = 'fa fa-info'
 
 
 class BAdmin(object):
     list_display = ['url']
+    model_icon = 'fa fa-image'
 
 
 xadmin.site.register(Products, PAdmin)          # 产品

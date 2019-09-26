@@ -29,7 +29,7 @@ SECRET_KEY = 'crifbwt--l6dr9q15uiq)z8ei$si@_7(te+6tal0bb^4c22076'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "106.52.155.253",
+    "106.54.20.38",
     "www.lzhb.site",
     "lzhb.site",
     '127.0.0.1'

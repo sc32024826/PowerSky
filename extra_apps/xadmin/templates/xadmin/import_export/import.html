@@ -19,14 +19,14 @@
 
 {% block content %}
 {% if confirm_form %}
-  <form action="{% url opts|admin_urlname:"process_import" %}" method="POST">
+  <form action="{% url opts|admin_urlname:'process_import' %}" method="POST">
     {% csrf_token %}
     {{ confirm_form.as_p }}
     <p>
       {% trans "Below is a preview of data to be imported. If you are satisfied with the results, click 'Confirm import'" %}
     </p>
     <div class="submit-row">
-      <input type="submit" class="default btn btn-primary" name="confirm" value="{% trans "Confirm import" %}">
+      <input type="submit" class="default btn btn-primary" name="confirm" value="{% trans 'Confirm import' %}">
     </div>
   </form>
 
@@ -56,7 +56,7 @@
     </fieldset>
 
     <div class="submit-row">
-      <input type="submit" class="default btn btn-primary" value="{% trans "Submit" %}">
+      <input type="submit" class="default btn btn-primary" value="{% trans 'Submit' %}">
     </div>
   </form>
 {% endif %}
